@@ -19,7 +19,6 @@ public class Calculator : FortressCraftMod
     public IEnumerator Start()
     {
         backgroundUriBuildier.Scheme = "file";
-
         background = new Texture2D(598, 358, TextureFormat.DXT5, false);
         using (WWW www = new WWW(backgroundUriBuildier.ToString()))
         {
@@ -80,28 +79,27 @@ public class Calculator : FortressCraftMod
 
     public void OnGUI()
     {
-        //ASPECT RATIO
-        int ScreenHeight = Screen.height;
-        int ScreenWidth = Screen.width;
+        int screenHeight = Screen.height;
+        int screenWidth = Screen.width;
 
-        Rect backgroundRect = new Rect((ScreenWidth * 0.20f), (ScreenHeight * 0.19f), (ScreenWidth * 0.575f), (ScreenHeight * 0.50f));
-        Rect entryRect = new Rect((ScreenWidth * 0.34f), (ScreenHeight * 0.28f), (ScreenWidth * 0.28f), (ScreenHeight * 0.05f));
-        Rect addButtonRect = new Rect((ScreenWidth * 0.30f), (ScreenHeight * 0.36f), (ScreenWidth * 0.05f), (ScreenHeight * 0.05f));
-        Rect subtractButtonRect = new Rect((ScreenWidth * 0.30f), (ScreenHeight * 0.42f), (ScreenWidth * 0.05f), (ScreenHeight * 0.05f));
-        Rect multiplyButtonRect = new Rect((ScreenWidth * 0.30f), (ScreenHeight * 0.48f), (ScreenWidth * 0.05f), (ScreenHeight * 0.05f));
-        Rect divideButtonRect = new Rect((ScreenWidth * 0.30f), (ScreenHeight * 0.54f), (ScreenWidth * 0.05f), (ScreenHeight * 0.05f));
-        Rect clearButtonReact = new Rect((ScreenWidth * 0.38f), (ScreenHeight * 0.36f), (ScreenWidth * 0.05f), (ScreenHeight * 0.05f));
-        Rect equalsButtonRect = new Rect((ScreenWidth * 0.38f), (ScreenHeight * 0.42f), (ScreenWidth * 0.05f), (ScreenHeight * 0.05f));
-        Rect button0Reect = new Rect((ScreenWidth * 0.50f), (ScreenHeight * 0.54f), (ScreenWidth * 0.05f), (ScreenHeight * 0.05f));
-        Rect button1Reect = new Rect((ScreenWidth * 0.50f), (ScreenHeight * 0.48f), (ScreenWidth * 0.05f), (ScreenHeight * 0.05f));
-        Rect button2Reect = new Rect((ScreenWidth * 0.56f), (ScreenHeight * 0.48f), (ScreenWidth * 0.05f), (ScreenHeight * 0.05f));
-        Rect button3Reect = new Rect((ScreenWidth * 0.62f), (ScreenHeight * 0.48f), (ScreenWidth * 0.05f), (ScreenHeight * 0.05f));
-        Rect button4Reect = new Rect((ScreenWidth * 0.50f), (ScreenHeight * 0.42f), (ScreenWidth * 0.05f), (ScreenHeight * 0.05f));
-        Rect button5Reect = new Rect((ScreenWidth * 0.56f), (ScreenHeight * 0.42f), (ScreenWidth * 0.05f), (ScreenHeight * 0.05f));
-        Rect button6Reect = new Rect((ScreenWidth * 0.62f), (ScreenHeight * 0.42f), (ScreenWidth * 0.05f), (ScreenHeight * 0.05f));
-        Rect button7Reect = new Rect((ScreenWidth * 0.50f), (ScreenHeight * 0.36f), (ScreenWidth * 0.05f), (ScreenHeight * 0.05f));
-        Rect button8Reect = new Rect((ScreenWidth * 0.56f), (ScreenHeight * 0.36f), (ScreenWidth * 0.05f), (ScreenHeight * 0.05f));
-        Rect button9Reect = new Rect((ScreenWidth * 0.62f), (ScreenHeight * 0.36f), (ScreenWidth * 0.05f), (ScreenHeight * 0.05f));
+        Rect backgroundRect = new Rect((screenWidth * 0.20f), (screenHeight * 0.19f), (screenWidth * 0.575f), (screenHeight * 0.50f));
+        Rect entryRect = new Rect((screenWidth * 0.34f), (screenHeight * 0.28f), (screenWidth * 0.28f), (screenHeight * 0.05f));
+        Rect addButtonRect = new Rect((screenWidth * 0.30f), (screenHeight * 0.36f), (screenWidth * 0.05f), (screenHeight * 0.05f));
+        Rect subtractButtonRect = new Rect((screenWidth * 0.30f), (screenHeight * 0.42f), (screenWidth * 0.05f), (screenHeight * 0.05f));
+        Rect multiplyButtonRect = new Rect((screenWidth * 0.30f), (screenHeight * 0.48f), (screenWidth * 0.05f), (screenHeight * 0.05f));
+        Rect divideButtonRect = new Rect((screenWidth * 0.30f), (screenHeight * 0.54f), (screenWidth * 0.05f), (screenHeight * 0.05f));
+        Rect clearButtonReact = new Rect((screenWidth * 0.38f), (screenHeight * 0.36f), (screenWidth * 0.05f), (screenHeight * 0.05f));
+        Rect equalsButtonRect = new Rect((screenWidth * 0.38f), (screenHeight * 0.42f), (screenWidth * 0.05f), (screenHeight * 0.05f));
+        Rect button0Reect = new Rect((screenWidth * 0.50f), (screenHeight * 0.54f), (screenWidth * 0.05f), (screenHeight * 0.05f));
+        Rect button1Reect = new Rect((screenWidth * 0.50f), (screenHeight * 0.48f), (screenWidth * 0.05f), (screenHeight * 0.05f));
+        Rect button2Reect = new Rect((screenWidth * 0.56f), (screenHeight * 0.48f), (screenWidth * 0.05f), (screenHeight * 0.05f));
+        Rect button3Reect = new Rect((screenWidth * 0.62f), (screenHeight * 0.48f), (screenWidth * 0.05f), (screenHeight * 0.05f));
+        Rect button4Reect = new Rect((screenWidth * 0.50f), (screenHeight * 0.42f), (screenWidth * 0.05f), (screenHeight * 0.05f));
+        Rect button5Reect = new Rect((screenWidth * 0.56f), (screenHeight * 0.42f), (screenWidth * 0.05f), (screenHeight * 0.05f));
+        Rect button6Reect = new Rect((screenWidth * 0.62f), (screenHeight * 0.42f), (screenWidth * 0.05f), (screenHeight * 0.05f));
+        Rect button7Reect = new Rect((screenWidth * 0.50f), (screenHeight * 0.36f), (screenWidth * 0.05f), (screenHeight * 0.05f));
+        Rect button8Reect = new Rect((screenWidth * 0.56f), (screenHeight * 0.36f), (screenWidth * 0.05f), (screenHeight * 0.05f));
+        Rect button9Reect = new Rect((screenWidth * 0.62f), (screenHeight * 0.36f), (screenWidth * 0.05f), (screenHeight * 0.05f));
 
         if (calculatorEnabled == true)
         {
